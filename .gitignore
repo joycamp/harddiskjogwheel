@@ -52,3 +52,6 @@ minimal_test/
 # OpenSCAD files
 *.scad
 
+# ESP32 partition tables (not needed for this project)
+partitions.csv
+
