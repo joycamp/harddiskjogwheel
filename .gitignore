@@ -33,3 +33,11 @@ env/
 *.bak
 *.old
 
+# 3D Models
+models/
+*.blend
+*.blend1
+*.stl
+*.obj
+*.mtl
+
