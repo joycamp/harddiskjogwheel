@@ -41,3 +41,14 @@ models/
 *.obj
 *.mtl
 
+# Test sketches and utilities
+as5600_test/
+as5600_test_i2c/
+i2c_scanner/
+minimal_test/
+*_test.ino
+*_test_*.ino
+
+# OpenSCAD files
+*.scad
+
