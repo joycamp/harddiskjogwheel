@@ -218,17 +218,6 @@ Open Serial Monitor (115200 baud) to see:
 - MIDI messages being sent
 - Connection status
 
-### I2C Scanner
-
-If the AS5600 isn't responding, use the included `i2c_scanner` sketch to verify I2C communication.
-
-### AS5600 Test Sketch
-
-Use `as5600_test_i2c/as5600_test_i2c.ino` to verify:
-- AS5600 wiring is correct
-- Magnet is positioned properly
-- Sensor readings are stable
-
 ## Troubleshooting
 
 ### Device Not Appearing in Bluetooth Settings
@@ -242,8 +231,8 @@ Use `as5600_test_i2c/as5600_test_i2c.ino` to verify:
 
 - Check wiring: VCC→3.3V, GND→GND, SDA→GPIO8, SCL→GPIO9
 - Verify magnet is positioned 1-3mm above sensor
-- Use I2C scanner to check if device appears at address 0x36
 - Check Serial Monitor for specific error codes
+- Verify I2C address 0x36 is accessible (you can use any I2C scanner tool)
 
 ### MIDI Messages Not Working in DAW
 
@@ -270,15 +259,12 @@ Use `as5600_test_i2c/as5600_test_i2c.ino` to verify:
 ## Project Structure
 
 ```
-midijogwheelV2/
+harddiskjogwheel/
 ├── midijogwheelV2.ino          # Main sketch
 ├── README.md                    # This file
-├── as5600_test_i2c/            # AS5600 test sketch
-│   └── as5600_test_i2c.ino
-├── i2c_scanner/                # I2C bus scanner utility
-│   └── i2c_scanner.ino
-├── serial_monitor.py           # Python serial monitor script
-└── models/                     # 3D models (if applicable)
+├── LICENSE                      # MIT License
+├── serial_monitor.py           # Python serial monitor script (optional)
+└── .gitignore                  # Git ignore rules
 ```
 
 ## Libraries Used
