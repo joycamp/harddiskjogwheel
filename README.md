@@ -31,7 +31,7 @@ This project creates a Bluetooth Low Energy (BLE) MIDI device that sends relativ
 **Note:** The AS5600 operates at 3.3V logic levels, which matches the ESP32-S3 perfectly. No level shifters needed.
 
 ### Button (Optional)
-- **One terminal** → GPIO 4
+- **One terminal** → GPIO 41
 - **Other terminal** → GND
 
 The code uses internal pull-up resistors, so no external pull-up needed.
@@ -147,7 +147,7 @@ If you need different GPIO pins:
 ```cpp
 const int SDA_PIN = 8;      // AS5600 SDA pin
 const int SCL_PIN = 9;      // AS5600 SCL pin
-const int BUTTON_PIN = 4;   // Button pin
+const int BUTTON_PIN = 41;   // Button pin
 ```
 
 **Note:** ESP32-S3 supports I2C on any GPIO pins. Choose pins that don't conflict with your board's USB/JTAG pins.
